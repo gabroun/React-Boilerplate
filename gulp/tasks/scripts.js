@@ -9,5 +9,5 @@ gulp.task('scripts', _ => {
     return gulp.src(config.src + '/app.jsx')
     .pipe(webpackStream(webpackConfig), webpack)
     .pipe(gulp.dest(config.dest))
-    pipe(livereload());
+    .pipe(livereload());
 });
