@@ -1,8 +1,12 @@
-var express = require('express');
+const express = require('express');
 
-var app = express();
+const app = express();
 
-app.use(express.static('public'));
+
+app.use(
+    express.static(__dirname + '/dist')
+);
+
 
 app.listen(3000, function () {
     console.log('express server is up on 3000')
